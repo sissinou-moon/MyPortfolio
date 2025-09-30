@@ -1,26 +1,21 @@
-import type { Metadata } from "next";
-import { Special_Gothic_Condensed_One } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 import "./globals.css";
 
-const specialGothic = Special_Gothic_Condensed_One({
-    weight: "400",
+const robotoFlex = Roboto_Flex({
+    weight: ["200", "300", "400", "500", "600", "700", "800"],
     subsets: ["latin"],
-    variable: "--font-special-gothic-condensed-one",
+    variable: "--font-roboto-flex",
 });
 
-export const metadata: Metadata = {
-    title: "Your App Title",
-    description: "Description here",
+export const metadata = {
+    title: "Your Portfolio",
+    description: "Your name — Developer Portfolio",
 };
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-        <body className={`${specialGothic.variable} antialiased`}>
+        <body className={`${robotoFlex.variable} antialiased`}>
         {children}
         </body>
         </html>

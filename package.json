@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@lordicon/react": "^1.11.0",
     "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.3.0",
     "@signal-noise/react-shader-canvas": "^0.0.3",
     "gsap": "^3.13.0",
+    "lottie-web": "^5.13.0",
     "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",

@@ -9,17 +9,17 @@ export default function Header() {
                 width={200}
                 className="object-contain"
             />
-            <div className="flex flex-row gap-6">
-                <a href="#" className="text-md text-[#512E1F] font-light">
+            <div className="flex flex-row gap-4">
+                <a href="#" className="text-sm text-[#512E1F]">
                     About
                 </a>
-                <a href="#" className="text-md text-[#512E1F] font-light">
+                <a href="#" className="text-sm text-[#512E1F]">
                     Experiences
                 </a>
-                <a href="#" className="text-md text-[#512E1F] font-light">
+                <a href="#" className="text-sm text-[#512E1F]">
                     Projects
                 </a>
-                <a href="#" className="text-md text-[#512E1F] font-light">
+                <a href="#" className="text-sm text-[#512E1F]">
                     Contact
                 </a>
             </div>

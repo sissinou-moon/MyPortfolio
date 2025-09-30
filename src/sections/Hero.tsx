@@ -181,8 +181,8 @@ export default function Hero() {
                 <FullPlanet containerRef={shapeContainer}/>
                 <FloatingPoints /> {/* 🌟 Add floating dots here */}
                 <div ref={textContainer} className='absolute inset-0 flex flex-col h-full w-full items-center justify-center z-10'>
-                    <h1 ref={nameRef} className='text-[65px] text-center text-[#512E1F] tracking-wide max-w-150 leading-15 mb-5'>Designing the Future<br/>One Pixel at a Time</h1>
-                    <p ref={aboutRef} className='text-sm font-light text-[#512E1F] max-w-105 text-center'>Hi, I’m Abderrahmane — a developer and entrepreneur passionate about building impactful digital solutions. With experience in full-stack development, mobile apps, and scalable backend systems</p>
+                    <h1 ref={nameRef} className='text-[60px] text-center text-[#512E1F] font-bold tracking-wide max-w-165 leading-15 mb-5'>Designing the Future<br/>One Pixel at a Time</h1>
+                    <p ref={aboutRef} className='text-sm text-[#512E1F] max-w-105 text-center'>Hi, I’m Abderrahmane — a developer and entrepreneur passionate about building impactful digital solutions. With experience in full-stack development, mobile apps, and scalable backend systems</p>
                     <div ref={linksRef} className='flex flex-row max-w-60 items-center justify-center gap-3 mt-5'>
                         <img src={linkedin.src} alt='linkedin' width={17} height={17} className='rounded-sm'/>
                         <img src={thread.src} alt='linkedin' width={17} height={17}/>
