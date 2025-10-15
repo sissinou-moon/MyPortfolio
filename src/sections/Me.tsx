@@ -113,7 +113,7 @@ export function Me() {
                 <div className='relative bg-[#F2F2F2] rounded-2xl shadow-lg flex flex-row mt-25'>
                     {
                         pricing.map((item, index) => (
-                            <>
+                            <div key={index}>
                                 {
                                     index !== 1 ? (
                                         <div className={index === 2 ? "flex flex-col gap-1 p-10 opacity-0 max-w-70" : 'flex flex-col gap-1 p-10'}>
@@ -121,14 +121,14 @@ export function Me() {
                                             <p className='text-lg font-medium text-black mt-7'>{item.name}</p>
                                             <p className='text-sm font-light text-black mb-10 max-w-60'>{item.description}</p>
                                             {
-                                                item.services.map((service, index) => (
-                                                    <div className='flex flex-row gap-3 items-center'>
+                                                item.services.map((service, i) => (
+                                                    <div key={i} className='flex flex-row gap-3 items-center'>
                                                         <img src={check.src} alt='check' className='h-3 w-3'/>
                                                         <p className='text-black/70 font-light text-sm'>{service}</p>
                                                     </div>
                                                 ))
                                             }
-                                            <div className='flex flex-row border border-[#804915]/30 bg-[#EACB88] text-black font-medium rounded-full items-center justify-center py-2 mt-10'>Get Started!</div>
+                                            <div className='flex flex-row border border-[#804915]/30 bg-[#EACB88] text-black font-medium rounded-full items-center justify-center py-2 mt-10  cursor-pointer transition-all ease-in-out duration-500 hover:scale-103'>Get Started!</div>
                                         </div>
                                     ) : <div className="absolute inset-0 z-10 flex items-center justify-center mb-15">
                                         <div className="flex flex-col gap-1 p-10 bg-gradient-to-b from-[#DCB262] to-[#B37C32] rounded-2xl shadow-lg">
@@ -143,14 +143,14 @@ export function Me() {
                                                 </div>
                                             ))}
 
-                                            <div className="flex flex-row border border-[#804915]/50 bg-[#F2F2F2] text-black font-medium rounded-full items-center justify-center py-2 mt-10 max-w-60">
+                                            <div className="flex flex-row border border-[#804915]/50 bg-[#F2F2F2] text-black font-medium rounded-full items-center justify-center py-2 mt-10 max-w-60 cursor-pointer transition-all ease-in-out duration-500 hover:scale-103">
                                                 Get Started!
                                             </div>
                                         </div>
                                     </div>
 
                                 }
-                            </>
+                            </div>
                         ))
                     }
                 </div>

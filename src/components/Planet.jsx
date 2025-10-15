@@ -13,7 +13,7 @@ export function Planet(props) {
     const { nodes, materials } = useGLTF('/models/Planet.glb')
 
     useGSAP(() => {
-        const tl = gsap.timeline({delay: 5});
+        const tl = gsap.timeline();
 
         tl.from(shapeContainer.current.position, {
             y: 5,

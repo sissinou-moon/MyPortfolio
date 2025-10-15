@@ -29,7 +29,7 @@ export default function Hero() {
 
     useGSAP(() => {
         const tl = gsap.timeline({ delay: 0.5 });
-        const sTl = gsap.timeline({ delay: 6 });
+        const sTl = gsap.timeline({delay: 2});
         const scrollTL = gsap.timeline({
             scrollTrigger: {
                 trigger: mainContainer.current,
@@ -66,120 +66,13 @@ export default function Hero() {
                 duration: 1,
                 ease: "power1.out",
             }, ">-=0.4"); // same logic
-
-        if (textRef.current) {
-            const letters = textRef.current.querySelectorAll("span");
-            const lines = paragraphRef.current?.querySelectorAll("span")!;
-
-            tl.fromTo(
-                letters,
-                { x: 10, opacity: 0 },
-                {
-                    x: 0,
-                    opacity: 1,
-                    duration: 1,
-                    stagger: 0.05,
-                    ease: "power4.out",
-                }
-            ).add(animationProgress(), "<").add(
-                tl.fromTo(
-                    lines,
-                    { y: 20, opacity: 0 },
-                    {
-                        y: 0,
-                        opacity: 1,
-                        duration: 2,
-                        stagger: 0.7,
-                        ease: "power3.out",
-                    },
-                    "-=3"
-                )
-            ).to(letters, {
-                    x: '-100%',
-                    opacity: 0,
-                    stagger: 0.05,
-                    duration: 1,
-                    ease: "power4.inout",
-                }, "-=0.5"
-            ).to(lines, {
-                y: '-100%',
-                opacity: 0,
-                stagger: 0.4,
-                duration: 1,
-                ease: "power4.inout",
-            }, "<").to(mainBarRef.current, {
-                opacity: 0,
-                duration: 0.5,
-                ease: "power3.out",
-            }, "-=0.25").to(maskRef.current, {
-                clipPath: "circle(0% at center)", // shrink to reveal background
-                duration: 1.5,
-                ease: "power3.inOut",
-            }, "<");
-        }
     });
-
-    const animationProgress = (duration = 4) => {
-        const tl = gsap.timeline();
-        const counterSteps = 5;
-        let currentProgress = 0;
-
-        for (let i = 0; i < counterSteps; i++) {
-            const finalStep = i === counterSteps - 1;
-            const targetProgress = finalStep
-                ? 1
-                : Math.min(currentProgress + Math.random() * 0.3 + 0.1, 0.9);
-            currentProgress = targetProgress;
-
-            tl.to(barRef.current, {
-                scaleX: targetProgress,
-                duration: duration / counterSteps,
-                stagger: 0.05,
-                ease: "power2.out",
-            });
-        }
-
-        return tl;
-    };
 
     return (
         <section ref={mainContainer} className="bg-[#F2F2F2] h-full w-screen flex flex-col justify-center items-center relative">
-            <div ref={maskRef} className="absolute z-30 flex flex-col justify-center items-center bg-[#171717] h-screen w-screen" style={{ clipPath: "circle(100% at center)" }}>
-                {/* Outer progress container */}
-                <div ref={mainBarRef} className="bg-black/50 rounded-[60px] h-40 w-130 relative flex items-center justify-center overflow-hidden mt-60">
-                    {/* White expanding bar */}
-                    <div
-                        ref={barRef}
-                        className="absolute left-0 h-50 w-full bg-white origin-left scale-x-0"
-                    ></div>
-
-                    {/* Text with blend mode */}
-                    <h1
-                        ref={textRef}
-                        className="absolute z-20 font-semibold text-[40px] flex gap-1 mix-blend-difference"
-                    >
-                        {chars.map((char, i) => (
-                            <span key={i} className="inline-block opacity-0">
-                                {char}
-                            </span>
-                        ))}
-                    </h1>
-                </div>
-
-                {/* Paragraph text (line by line animation) */}
-                <div
-                    ref={paragraphRef}
-                    className="flex flex-col justify-center items-center text-center h-30 text-white font-light text-sm mt-50"
-                >
-                    <span>Spaces unfold in light and shadow, where structure finds its</span>
-                    <span>quiet rhythm, and time align in harmony</span>
-                </div>
-            </div>
-
             {/* Planet */}
             <div ref={contentRef} className="relative h-screen w-screen">
                 <FullPlanet containerRef={shapeContainer}/>
-                <FloatingPoints /> {/* 🌟 Add floating dots here */}
                 <div ref={textContainer} className='absolute inset-0 flex flex-col h-full w-full items-center justify-center z-10'>
                     <h1 ref={nameRef} className='text-[60px] text-center text-[#512E1F] font-bold tracking-wide max-w-165 leading-15 mb-5'>Designing the Future<br/>One Pixel at a Time</h1>
                     <p ref={aboutRef} className='text-sm text-[#512E1F] max-w-105 text-center'>Hi, I’m Abderrahmane — a developer and entrepreneur passionate about building impactful digital solutions. With experience in full-stack development, mobile apps, and scalable backend systems</p>
