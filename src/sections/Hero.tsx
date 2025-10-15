@@ -72,7 +72,7 @@ export default function Hero() {
         <section ref={mainContainer} className="bg-[#F2F2F2] h-full w-screen flex flex-col justify-center items-center relative">
             {/* Planet */}
             <div ref={contentRef} className="relative md:h-screen h-full w-screen">
-                <div className='md:w-full md:h-full w-full h-150'>
+                <div className='hidden md:block md:w-full md:h-full w-full h-150'>
                     <FullPlanet containerRef={shapeContainer}/>
                 </div>
                 <div ref={textContainer} className='absolute inset-0 flex flex-col h-full w-full items-center justify-center z-10'>
