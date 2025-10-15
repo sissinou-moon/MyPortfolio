@@ -68,7 +68,7 @@ export default function Reviews() {
     ];
 
     return (
-        <section className="flex flex-col gap-2 items-center justify-center bg-[#F2F2F2] md:px-10 px-5 py-5">
+        <section id='testimonials' className="flex flex-col gap-2 items-center justify-center bg-[#F2F2F2] md:px-10 px-5 py-5">
             <div className="flex flex-col items-center justify-center py-7 rounded-2xl w-full bg-[radial-gradient(circle,#EFD491_0%,#DCB262_100%)] overflow-hidden">
                 <div className="flex flex-row gap-2 items-center">
                     <CheckSVG />

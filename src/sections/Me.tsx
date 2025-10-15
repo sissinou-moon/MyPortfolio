@@ -72,7 +72,7 @@ export function Me() {
     }, []);
 
     return (
-        <section className='flex flex-col relative h-full'>
+        <section  className='flex flex-col relative h-full bg-[#F2F2F2]'>
             <div className='flex md:flex-row flex-col items-center justify-centers gap-1 bg-[#DCB262] lg:p-15 py-5 px-8 border border-b-black border-t-black pb-25 md:h-screen h-full'>
                 <img src={pfp.src} alt='pfp' className='rounded-full object-cover lg:h-120 lg:w-120 md:h-100 h-80 w-100 border-3 border-black mb-5 md:mb-0'/>
 
@@ -109,7 +109,7 @@ export function Me() {
                 </div>
             </div>
 
-            <div className='flex flex-col bg-[#F2F2F2] items-center justify-center lg:px-15 px-8 md:py-50 py-10 md:h-screen h-full'>
+            <div id='contact' className='flex flex-col bg-[#F2F2F2] items-center justify-center lg:px-15 px-8 md:py-50 py-10 md:h-screen h-full'>
                 <div className='relative bg-[#F2F2F2] rounded-2xl shadow-lg sm:grid sm:grid-cols-3 md:flex md:flex-row md:mt-25 px-10 py-10 gap-5'>
                     {
                         pricing.map((item, index) => (
@@ -157,6 +157,10 @@ export function Me() {
                             </div>
                         ))
                     }
+                </div>
+
+                <div className='bg-[#F2F2F2] w-screen  flex flex-row items-center justify-center text-sm font-light text-black mt-5 pt-10 pb-10'>
+                    <p>@Copyright-2025 Abderrahmane</p>
                 </div>
 
             </div>

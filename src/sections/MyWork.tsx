@@ -35,7 +35,7 @@ export default function MyWork() {
     ]
 
     return (
-        <section className='bg-[#F2F2F2] flex flex-col justify-center items-center md:px-15 px-8 py-10'>
+        <section id='projects' className='bg-[#F2F2F2] flex flex-col justify-center items-center md:px-15 px-8 py-10'>
             <div className='px-0.5 pr-2 py-0.5 flex flex-row justify-center items-center gap-1 rounded-full border border-black/20'>
                 <div className='bg-gradient-to-b from-[#EACB88] to-[#C08C41] px-2 py-0.5 rounded-full'><StarIcon size={17}/></div>
                 <p className='text-sm font-medium text-black'>My work</p>
