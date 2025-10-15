@@ -33,7 +33,7 @@ export default function Hero() {
         const scrollTL = gsap.timeline({
             scrollTrigger: {
                 trigger: mainContainer.current,
-                start: "50% 50%",
+                start: "50% 30%",
                 scrub: true,
             }
         });
@@ -71,18 +71,20 @@ export default function Hero() {
     return (
         <section ref={mainContainer} className="bg-[#F2F2F2] h-full w-screen flex flex-col justify-center items-center relative">
             {/* Planet */}
-            <div ref={contentRef} className="relative h-screen w-screen">
-                <FullPlanet containerRef={shapeContainer}/>
+            <div ref={contentRef} className="relative md:h-screen h-full w-screen">
+                <div className='md:w-full md:h-full w-full h-150'>
+                    <FullPlanet containerRef={shapeContainer}/>
+                </div>
                 <div ref={textContainer} className='absolute inset-0 flex flex-col h-full w-full items-center justify-center z-10'>
-                    <h1 ref={nameRef} className='text-[60px] text-center text-[#512E1F] font-bold tracking-wide max-w-165 leading-15 mb-5'>Designing the Future<br/>One Pixel at a Time</h1>
-                    <p ref={aboutRef} className='text-sm text-[#512E1F] max-w-105 text-center'>Hi, I’m Abderrahmane — a developer and entrepreneur passionate about building impactful digital solutions. With experience in full-stack development, mobile apps, and scalable backend systems</p>
+                    <h1 ref={nameRef} className='md:text-[60px] text-[35px] text-center text-[#512E1F] font-bold tracking-wide max-w-165 md:leading-15 leading-10 mb-5'>Designing the Future<br/>One Pixel at a Time</h1>
+                    <p ref={aboutRef} className='text-sm md:text-[17px] text-[#512E1F] max-w-105 text-center'>Hi, I’m Abderrahmane — a developer and entrepreneur passionate about building impactful digital solutions. With experience in full-stack development, mobile apps, and scalable backend systems</p>
                     <div ref={linksRef} className='flex flex-row max-w-60 items-center justify-center gap-3 mt-5'>
                         <img src={linkedin.src} alt='linkedin' width={17} height={17} className='rounded-sm'/>
                         <img src={thread.src} alt='linkedin' width={17} height={17}/>
                         <img src={github.src} alt='linkedin' width={17} height={17}/>
                     </div>
                 </div>
-                <p className='absolute bottom-0 left-10 text-[35px] font-bold text-[#512E1F] leading-10 mb-2'>Where Code<br/>Meets Creativity</p>
+                <p className='hidden md:block absolute bottom-0 left-10 text-[35px] font-bold text-[#512E1F] leading-10 mb-2'>Where Code<br/>Meets Creativity</p>
             </div>
         </section>
     );

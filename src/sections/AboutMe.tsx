@@ -33,7 +33,7 @@ export default function AboutMe() {
 
     const features = [
         {
-            title: "Full-Stack Development",
+            title: "Full-Stack Development Front-Back End",
             description:
                 "I build complete web applications, covering both frontend and backend, ensuring smooth communication.",
             icon: coding,
@@ -84,14 +84,14 @@ export default function AboutMe() {
     ]
 
     return (
-        <section className='bg-[#F2F2F2] p-10'>
-            <div className='px-15 py-10 rounded-2xl bg-[#EAEAEA] flex flex-col justify-center items-center'>
+        <section className='bg-[#F2F2F2] md:p-10 p-5'>
+            <div className='md:px-15 px-8 py-10 rounded-2xl bg-[#EAEAEA] flex flex-col justify-center items-center'>
                 <div className='px-0.5 pr-2 py-0.5 flex flex-row justify-center items-center gap-1 rounded-full border border-black/20'>
                     <div className='bg-gradient-to-b from-[#EACB88] to-[#C08C41] px-2 py-0.5 rounded-full'><StarIcon size={17}/></div>
                     <p className='text-sm font-medium text-black'>About me</p>
                 </div>
 
-                <div className='mt-10 grid grid-cols-3 gap-6 mb-5'>
+                <div className='mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-col-1 gap-6 mb-5'>
                     {
                         features.map((feature, i) => (
                             <div key={i} className='p-6 flex flex-col justify-start items-start bg-[#F2F2F2] rounded-xl shadow-md gap-1'>

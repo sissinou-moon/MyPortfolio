@@ -42,14 +42,14 @@ export default function Reviews() {
             platform: "Local",
             review:
                 "Professional and efficient developer, he understood my requirements and delivered on time.",
-            icon: pfp2,
+            icon: pfp3,
         },
         {
             name: "Sara L.",
             platform: "Local",
             review:
                 "Very reliable and skilled. The final product was even better than I expected.",
-            icon: pfp3,
+            icon: pfp2,
         },
         {
             name: "Younes K.",
@@ -68,18 +68,18 @@ export default function Reviews() {
     ];
 
     return (
-        <section className="flex flex-col gap-2 items-center justify-center bg-[#F2F2F2] px-10 py-5">
+        <section className="flex flex-col gap-2 items-center justify-center bg-[#F2F2F2] md:px-10 px-5 py-5">
             <div className="flex flex-col items-center justify-center py-7 rounded-2xl w-full bg-[radial-gradient(circle,#EFD491_0%,#DCB262_100%)] overflow-hidden">
-                <div className="flex flex-row gap-2">
+                <div className="flex flex-row gap-2 items-center">
                     <CheckSVG />
-                    <p className="text-sm text-black">Trusted By Clients Around The World</p>
+                    <p className="md:text-sm text-xs text-black">Trusted By Clients Around The World</p>
                 </div>
 
                 <h1 className="text-3xl text-black font-medium max-w-110 text-center mt-5 mb-5 leading-8">
                     Praised by innovators and entrepreneurs
                 </h1>
 
-                <p className="text-black/70 text-sm">
+                <p className="text-black/70 text-sm text-center max-w-75 md:max-w-200">
                     Chosen by countless founders and startups to accelerate their growth and success.
                 </p>
 
